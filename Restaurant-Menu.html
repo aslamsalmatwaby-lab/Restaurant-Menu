@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أسماك الخير | لجميع أنواع السمك، المنيا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#EAF4F3; --ink:#0B2E36; --muted:#4A6A70; --card:#FFFFFF; --line:#BCD6D8;
+  --lemon:#F4C430; --lemonink:#0B2E36; --scale:%230E4C5A; --tabon:#0E4C5A; --tabonink:#F2F7F6;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A2229; --ink:#E8F1F0; --muted:#9DB9BD; --card:#10303A; --line:#1E4650;
+    --scale:%23FFFFFF; --tabon:#F4C430; --tabonink:#0B2E36; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A2229; --ink:#E8F1F0; --muted:#9DB9BD; --card:#10303A; --line:#1E4650;
+  --scale:%23FFFFFF; --tabon:#F4C430; --tabonink:#0B2E36; color-scheme:dark;
+}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Almarai",system-ui,sans-serif;font-size:17px;line-height:1.9}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#0B5F78;z-index:10}
+h1,h2,h3{font-family:"Cairo","Almarai",system-ui,sans-serif;margin:0;line-height:1.3}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lemon);outline-offset:3px}
+
+/* Hero: deep water, light rays, scales */
+.hero{position:relative;overflow:hidden;color:#F2F7F6;padding:64px 22px 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 80% 0%,rgba(255,255,255,.22),transparent 70%),
+    linear-gradient(180deg,#0E8AA6 0%,#0A5F78 38%,#06303F 78%,#031A24 100%)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(105deg,rgba(255,255,255,.07) 0 26px,transparent 26px 90px);
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);mask-image:linear-gradient(180deg,#000,transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.9;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26'%3E%3Cpath d='M0 26a22 22 0 0 1 44 0M-22 13a22 22 0 0 1 44 0M22 13a22 22 0 0 1 44 0' fill='none' stroke='%23fff' stroke-opacity='.07'/%3E%3C/svg%3E");
+  -webkit-mask-image:linear-gradient(0deg,#000,transparent 80%);mask-image:linear-gradient(0deg,#000,transparent 80%)}
+.hero .wrap{position:relative;z-index:1;max-width:920px;margin:0 auto}
+.hero h1{font-size:clamp(54px,15vw,128px);font-weight:800;letter-spacing:0}
+.hero h2{font-size:clamp(20px,5.4vw,34px);font-weight:600;color:var(--lemon);margin-top:10px}
+.hero p{max-width:36ch;margin:18px 0 0;opacity:.92}
+.cta{display:inline-block;margin-top:24px;background:var(--lemon);color:var(--lemonink);font-weight:700;text-decoration:none;padding:13px 28px;border-radius:999px}
+.bub{position:absolute;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),transparent 60%)}
+.sea{height:130px;margin-top:30px;position:relative;z-index:1}
+.sea svg.wave{position:absolute;inset:auto 0 0 0;width:100%;height:64px}
+.fish{position:absolute;bottom:44px;width:92px;right:-110px;animation:swim 16s linear 1 forwards}
+@keyframes swim{to{right:calc(100% + 110px)}}
+@media (prefers-reduced-motion:reduce){.fish{animation:none;right:22px}}
+
+/* Menu band: light water + scales */
+.band{padding:56px 22px 8px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26'%3E%3Cpath d='M0 26a22 22 0 0 1 44 0M-22 13a22 22 0 0 1 44 0M22 13a22 22 0 0 1 44 0' fill='none' stroke='%230E4C5A' stroke-opacity='.09'/%3E%3C/svg%3E")}
+@media (prefers-color-scheme:dark){.band{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26'%3E%3Cpath d='M0 26a22 22 0 0 1 44 0M-22 13a22 22 0 0 1 44 0M22 13a22 22 0 0 1 44 0' fill='none' stroke='%23fff' stroke-opacity='.06'/%3E%3C/svg%3E")}}
+.in{max-width:920px;margin:0 auto}
+h2.t{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:0}
+.sub{color:var(--muted);margin:8px 0 24px}
+
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.tabs button{font:inherit;font-weight:500;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:8px 20px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--tabon);color:var(--tabonink);border-color:var(--tabon)}
+.board{margin-top:18px;background:var(--card);border-radius:18px;padding:6px 22px;border:1px solid var(--line)}
+.item{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.item .n{flex:1}
+.ico{flex:none;width:72px;height:52px;border-radius:14px;background:var(--bg);display:grid;place-items:center;align-self:center}
+.ico svg{width:56px;height:40px}
+.item h3{font-size:22px;font-weight:600}
+.item p{margin:4px 0 0;color:var(--muted);font-size:15px;line-height:1.5}
+.item .p{font-family:"Cairo",sans-serif;font-size:24px;font-weight:800;white-space:nowrap}
+.item .p small{font-family:"Almarai",sans-serif;font-size:12px;color:var(--muted);font-weight:500;margin-inline-start:4px}
+.note{color:var(--muted);font-size:14px;margin:14px 0 0}
+
+/* Contact: night water */
+.contact{margin-top:56px;color:#F2F7F6;padding:64px 22px 0;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 60% 60% at 15% 0%,rgba(14,138,166,.45),transparent 70%),linear-gradient(180deg,#06303F,#031A24)}
+.contact::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26'%3E%3Cpath d='M0 26a22 22 0 0 1 44 0M-22 13a22 22 0 0 1 44 0M22 13a22 22 0 0 1 44 0' fill='none' stroke='%23fff' stroke-opacity='.06'/%3E%3C/svg%3E")}
+.contact .in{position:relative}
+.contact .sub{color:#A9C7CC}
+.info{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:6px}
+.info div{border-inline-start:4px solid var(--lemon);padding:2px 16px}
+.info b{display:block;font-size:19px;font-family:"Cairo",sans-serif}
+.info a{text-decoration:underline;text-underline-offset:3px}
+.call{display:inline-block;margin-top:28px;background:var(--lemon);color:var(--lemonink);font-weight:700;text-decoration:none;padding:13px 28px;border-radius:999px}
+footer{margin-top:48px;padding:20px 0 calc(24px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(255,255,255,.14);color:#A9C7CC;font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="bub" style="width:22px;height:22px;left:8%;top:30%"></span>
+  <span class="bub" style="width:12px;height:12px;left:14%;top:44%"></span>
+  <span class="bub" style="width:30px;height:30px;right:10%;top:52%"></span>
+  <span class="bub" style="width:14px;height:14px;right:18%;top:38%"></span>
+  <div class="wrap">
+    <h1>أسماك<br>الخير</h1>
+    <h2>لجميع أنواع السمك، المنيا</h2>
+    <p>سمك طازج يوصلنا كل صباح، مشوي أو مقلي زي ما تحب.</p>
+    <a class="cta" href="#contact">احجز طاولتك</a>
+  </div>
+  <div class="sea" aria-hidden="true">
+    <svg class="fish" viewBox="0 0 100 50" fill="none">
+      <path d="M8 25c14-20 40-22 62-6l22-13v38L70 31C48 47 22 45 8 25Z" fill="#F4C430"/>
+      <circle cx="26" cy="22" r="3" fill="#0B2E36"/>
+    </svg>
+    <svg class="wave" viewBox="0 0 400 60" preserveAspectRatio="none">
+      <path d="M0 30c33-20 67-20 100 0s67 20 100 0 67-20 100 0 67 20 100 0v30H0Z" fill="var(--bg)"/>
+    </svg>
+  </div>
+</header>
+
+<section class="band" id="menu">
+  <div class="in">
+    <h2 class="t">قائمة الأسماك</h2>
+    <p class="sub">اختار السمكة وطريقة الطهي. أسعار الأسماك بالكيلو.</p>
+    <div class="tabs" role="tablist" aria-label="طريقة الطهي"></div>
+    <div class="board" id="board" role="tabpanel"></div>
+    <p class="note">الأسعار أمثلة، وهتتعدل حسب أسعار المطعم.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="in">
+    <h2 class="t">زورونا في المنيا</h2>
+    <p class="sub">اتصل واحجز طاولتك أو تعالى على طول.</p>
+    <div class="info">
+      <div><b>العنوان</b>شارع طه حسين، المنيا، مصر</div>
+      <div><b>مواعيد العمل</b>يومياً من 12 ظهراً حتى 12 منتصف الليل</div>
+      <div><b>التليفون</b><a href="tel:+201127854914" dir="ltr">01127854914</a></div>
+    </div>
+    <a class="call" href="tel:+201127854914">اتصل الآن</a>
+    <footer>© أسماك الخير، شارع طه حسين، المنيا</footer>
+  </div>
+</section>
+
+<script>
+var I={
+fish:'<path d="M6 20c10-14 28-15 42-4l14-9v26l-14-9C34 36 16 34 6 20Z" fill="C"/><circle cx="18" cy="17" r="2" fill="#0B2E36"/>',
+round:'<ellipse cx="30" cy="20" rx="24" ry="15" fill="C"/><path d="M52 20l14-11v22Z" fill="C"/><circle cx="16" cy="17" r="2" fill="#0B2E36"/><path d="M28 8c4 8 4 16 0 24" stroke="#0B2E36" stroke-opacity=".25" fill="none"/>',
+long:'<ellipse cx="32" cy="20" rx="28" ry="9" fill="C"/><path d="M56 20l12-9v18Z" fill="C"/><circle cx="14" cy="18" r="2" fill="#0B2E36"/>',
+flat:'<ellipse cx="34" cy="20" rx="29" ry="13" fill="C"/><path d="M60 20l8-6v12Z" fill="C"/><circle cx="14" cy="15" r="2" fill="#0B2E36"/><circle cx="20" cy="13" r="2" fill="#0B2E36"/>',
+shrimp:'<path d="M50 10C36 2 16 10 16 24c0 6 4 10 10 10" stroke="C" stroke-width="9" stroke-linecap="round" fill="none"/><path d="M26 34l-8 4M31 33l-4 6" stroke="C" stroke-width="3" stroke-linecap="round"/><circle cx="52" cy="12" r="2" fill="#0B2E36"/>',
+squid:'<path d="M6 20c10-12 26-12 36 0-10 12-26 12-36 0Z" fill="C"/><path d="M42 14h14M42 20h18M42 26h14" stroke="C" stroke-width="3" stroke-linecap="round"/><circle cx="18" cy="17" r="2" fill="#0B2E36"/>',
+bowl:'<path d="M8 18h54c0 14-10 22-27 22S8 32 8 18Z" fill="C"/><path d="M24 12c-3-4 3-6 0-10M36 12c-3-4 3-6 0-10M48 12c-3-4 3-6 0-10" stroke="C" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+salad:'<path d="M8 22h54c0 12-10 18-27 18S8 34 8 22Z" fill="C"/><circle cx="24" cy="18" r="7" fill="#5CB85C"/><circle cx="38" cy="15" r="8" fill="#7BCB6B"/><circle cx="50" cy="19" r="6" fill="#5CB85C"/>',
+rice:'<path d="M8 30c4-18 50-18 54 0Z" fill="#F3E6C4"/><rect x="6" y="30" width="58" height="8" rx="4" fill="C"/>',
+fries:'<path d="M18 10l4 22M28 6l2 26M38 8l-2 24M48 12l-6 20" stroke="#F4C430" stroke-width="5" stroke-linecap="round"/><path d="M14 28h40l-4 12H18Z" fill="C"/>'
+};
+function ic(t,c){return '<span class="ico" aria-hidden="true"><svg viewBox="0 0 70 44">'+I[t].replace(/"C"/g,'"'+c+'"')+'</svg></span>';}
+var BL="#7FB2C6",OR="#F08A4B",SL="#B9C7CC",PK="#F29A8A",GD="#E2A63B",WH="#E7EEF0";
+var MENU={
+  "مشوي":[
+    ["دنيس مشوي","على الفحم بالليمون والأعشاب",320,"round",SL],
+    ["قاروص مشوي","محشي ثوم وكزبرة",340,"fish",BL],
+    ["بوري مشوي","سمكة كاملة بالملح والكمون",260,"long",SL],
+    ["بلطي مشوي","بتوابل خفيفة وليمون",190,"fish",GD],
+    ["جمبري مشوي","بزبدة الثوم والليمون",520,"shrimp",OR],
+    ["كلماري مشوي","متبّل بالشطة والليمون",430,"squid",PK]
+  ],
+  "مقلي":[
+    ["بلطي مقلي","مقرمش مع الدقة الحارة",190,"fish",GD],
+    ["فيليه سول مقلي","فيليه ذهبي مع الطحينة",360,"flat",WH],
+    ["بوري مقلي","مقرمش من برّه وطري من جوّه",280,"long",SL],
+    ["سردين مقلي","أسماك صغيرة مع الليمون",150,"long",BL],
+    ["جمبري مقلي","مقرمش مع صوص الكوكتيل",500,"shrimp",OR],
+    ["كلماري مقلي","حلقات مقرمشة مع صوص التارتار",430,"squid",PK]
+  ],
+  "من الفرن":[
+    ["سيّادية سمك","أرز بالبصل المحمّر",390,"round",GD],
+    ["صينية سمك بالطماطم","بالفلفل والثوم والكمون",330,"fish",OR],
+    ["طاجن سمك","يُقدَّم سخن مع الخضار",350,"round",SL],
+    ["سمك بالكريمة والجبن","يُخبز في الفرن",360,"flat",WH],
+    ["صينية بوري حراق","بالشطة والثوم والكزبرة",300,"long",BL],
+    ["طاجن جمبري","بصلصة الطماطم في الفخار",540,"shrimp",OR]
+  ],
+  "شوربة وجوانب":[
+    ["شوربة سمك","بالخضار والليمون",80,"bowl",BL],
+    ["شوربة فواكه بحر","جمبري وكلماري وسمك",110,"bowl",OR],
+    ["سلطة طحينة","طحينة طازجة بالليمون",40,"salad",GD],
+    ["سلطة خضراء","خيار وطماطم وجرجير",40,"salad",GD],
+    ["أرز صيادية","أرز بالبصل والكمون",50,"rice",GD],
+    ["بطاطس محمرة","سخنة ومقرمشة",45,"fries",GD]
+  ]
+};
+var tabs=document.querySelector(".tabs"),board=document.getElementById("board");
+function show(k){
+  var b=tabs.children;
+  for(var i=0;i<b.length;i++)b[i].setAttribute("aria-selected",b[i].dataset.k===k?"true":"false");
+  board.innerHTML=MENU[k].map(function(r){
+    var u=k==="شوربة وجوانب"?"جنيه":"جنيه/كجم";
+    return '<div class="item">'+ic(r[3],r[4])+'<div class="n"><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div><div class="p">'+r[2]+'<small>'+u+'</small></div></div>';
+  }).join("");
+}
+Object.keys(MENU).forEach(function(k,i){
+  var btn=document.createElement("button");
+  btn.textContent=k;btn.dataset.k=k;btn.setAttribute("role","tab");
+  btn.onclick=function(){show(k)};
+  tabs.appendChild(btn);
+  if(i===0)show(k);
+});
+</script>
+</body>
+</html>
